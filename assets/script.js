@@ -1,7 +1,62 @@
 // Wrap all code that interacts with the DOM in a call to jQuery to ensure that
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
+const time = [ {
+    hour: 9,
+    ampm: 'AM',
+    id: 'hour-9',
+    hr: 9
+},
+{
+    hour: 10,
+    ampm: 'AM',
+    id: 'hour-10',
+    hr: 10
+},
+{
+    hour: 11,
+    ampm: 'AM',
+    id: 'hour-11',
+    hr: 11
+},
+{
+    hour: 12,
+    ampm: 'PM',
+    id: 'hour-12',
+    hr: 12
+},
+{
+    hour: 1,
+    ampm: 'PM',
+    id: 'hour-13',
+    hr: 13
+},
+{
+    hour: 2,
+    ampm: 'PM',
+    id: 'hour-14',
+    hr: 14
+},
+{
+    hour: 3,
+    ampm: 'PM',
+    id: 'hour-15',
+    hr: 15
+},
+{
+    hour: 4,
+    ampm: 'PM',
+    id: 'hour-16',
+    hr: 16
+},
+{
+    hour: 5,
+    ampm: 'PM',
+    id: 'hour-17',
+    hr: 17
+},
 
+]
 
 
 $(function () {
