@@ -1,37 +1,21 @@
 # workday-scheduler
 
-## User Story
+## Description
 
-AS AN employee with a busy schedule
+This website provides the user with a daily, workday hours planner to manage time effectively. The workday planner allows the user to check list events and is color cordinated in past, present, and future for further organization. 
 
-I WANT to add important events ot a daily planner
+## Deployment 
 
-SO THAT I can manage my time effectively 
+Link: https://s-tovar.github.io/workday-scheduler/
 
-## Acceptance Criteria 
+## Screenshot
 
-GIVEN I am using a daily planner to create a schedule
+![plot](./assets/Screenshot%202023-04-20%20at%201.08.47%20PM.png)
 
-WHEN I open the planner
+## Installation
 
-THEN the current day is displayed at the top of the calendar DONE
+N/A
 
-WHEN I scroll down
+## Usage 
 
-THEN I am presented with time blocks for standard business hours DONE
-
-WHEN I view the time blocks for that day 
-
-THEN each time block is color-coded to indicate whether it is in the past, present, or future
-
-WHEN I click into a time block
-
-THEN I can enter an event DONE
-
-WHEN I click the save button for that time block
-
-THEN the text for that event is saved in local storage DONE
-
-WHEN I refresh the page
-
-THEN the saved events persist DONE
+To use this workday planner, the user will have access to an event planner that has workday hourse. The planner will present the current date at the top along with color cordinated event boxes that will aid the user organize their events by indicating whether the event is in the past, present or future. The user will be able to click into a time block and enter an event which can be saved for that time block in the local storage. When refreshing the page, the event that is saved will persist. 
