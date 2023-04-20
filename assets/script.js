@@ -2,64 +2,64 @@
 // the code isn't run until the browser has finished rendering all the elements
 // in the html.
 
-var timeIndex = 0;
+// var timeIndex = 0;
 
-const time = [ 
-    {
-        hour: 9,
-        ampm: 'AM',
-        id: 'hour-9',
-        hr: 9
-    },
-    {
-        hour: 10,
-        ampm: 'AM',
-        id: 'hour-10',
-        hr: 10
-    },
-    {
-        hour: 11,
-        ampm: 'AM',
-        id: 'hour-11',
-        hr: 11
-    },
-    {
-        hour: 12,
-        ampm: 'PM',
-        id: 'hour-12',
-        hr: 12
-    },
-    {
-        hour: 1,
-        ampm: 'PM',
-        id: 'hour-13',
-        hr: 13
-    },
-    {
-        hour: 2,
-        ampm: 'PM',
-        id: 'hour-14',
-        hr: 14
-    },
-    {
-        hour: 3,
-        ampm: 'PM',
-        id: 'hour-15',
-        hr: 15
-    },
-    {
-        hour: 4,
-        ampm: 'PM',
-        id: 'hour-16',
-        hr: 16
-    },
-    {
-        hour: 5,
-        ampm: 'PM',
-        id: 'hour-17',
-        hr: 17
-    },
-]
+// const time = [ 
+//     {
+//         hour: 9,
+//         ampm: 'AM',
+//         id: 'hour-9',
+//         hr: 9
+//     },
+//     {
+//         hour: 10,
+//         ampm: 'AM',
+//         id: 'hour-10',
+//         hr: 10
+//     },
+//     {
+//         hour: 11,
+//         ampm: 'AM',
+//         id: 'hour-11',
+//         hr: 11
+//     },
+//     {
+//         hour: 12,
+//         ampm: 'PM',
+//         id: 'hour-12',
+//         hr: 12
+//     },
+//     {
+//         hour: 1,
+//         ampm: 'PM',
+//         id: 'hour-13',
+//         hr: 13
+//     },
+//     {
+//         hour: 2,
+//         ampm: 'PM',
+//         id: 'hour-14',
+//         hr: 14
+//     },
+//     {
+//         hour: 3,
+//         ampm: 'PM',
+//         id: 'hour-15',
+//         hr: 15
+//     },
+//     {
+//         hour: 4,
+//         ampm: 'PM',
+//         id: 'hour-16',
+//         hr: 16
+//     },
+//     {
+//         hour: 5,
+//         ampm: 'PM',
+//         id: 'hour-17',
+//         hr: 17
+//     },
+// ]
 
 
 
@@ -78,23 +78,25 @@ $(function () {
     
             localStorage.setItem(timeBlockId, userInput);
             console.log("Saved user input for time-block with id: " + timeBlockId); //to check if function works
-            if (time[i].hr < dayjs().hour()) {
-                timeBlockId.addClass('past')
-            } else if (time[i].hr > daysj().hour()) {
-                timeBlockId.addClass('future')
-            } else {
-                timeBlockId.addClass('present')
-            }
         });
     
         $(".time-block").each(function() {
-            var timeBlockId = $(this).attr("id");
+            var timeBlockId = $(this).attr("id")
+            var currentTime = parseInt(timeBlockId.split("-")[1])
             var savedUserInput = localStorage.getItem(timeBlockId);
     
             if (savedUserInput !== null) {
                 $(this).find(".description").val(savedUserInput);
             }
             console.log("Retrieved user input for time-block id: " + timeBlockId); //to check if function works
+
+            if (currentTime < dayjs().hour()) {
+                $(this).addClass('past')
+            } else if (currentTime > dayjs().hour()) {
+                $(this).addClass('future')
+            } else {
+                $(this).addClass('present')
+            }
         });
     });
     // TODO: Add code to apply the past, present, or future class to each time
